@@ -1,0 +1,155 @@
+<<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style>
+    /* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+/* Add some content at the bottom of the video/page */
+.content {
+  position: fixed;
+  bottom: 0;
+  color: #f1f1f1;
+  width: 100%;
+  height: 50%;
+  padding: 20px;
+  left: 0;
+  font-size: 29px;
+}
+
+/* Style the button used to pause/play the video */
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  font-weight: 20%;
+  padding: 10px;
+  border-radius: 23px;
+  background: black;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 0 12px #0ef;}
+
+#myBtn:hover {
+  background: #0ef;
+  color: black;
+}
+
+
+
+
+/* Static Header Styles */
+  .static-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px; /* Adjust height as needed */
+    background-color: black;
+    z-index: 1000;
+  }
+  .static-header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+  .left-menu, .right-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+  .left-menu li, .right-menu li {
+    margin: 0 10px;
+  }
+  .left-menu li:first-child {
+    margin-right: auto;
+  }
+  .right-menu .dropdown {
+    position: relative;
+  }
+  .right-menu .dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: navy;
+    min-width: 160px;
+    z-index: 1;
+  }
+  .right-menu .dropdown .dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  .right-menu .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+a:link, a:visited {
+  color: white;
+  padding: 14px ;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: transparent;
+}
+
+  </style>
+</head>
+<body>
+  
+<!-- The video -->
+<video autoplay muted loop id="myVideo">
+  <source src="v1.mp4" type="video/mp4">
+</video>
+
+<header class="static-header">
+  <nav>
+    <ul class="left-menu">
+      <li><a href="#">Sign In</a></li>
+      <li><a href="#">Sign Up</a></li>
+    </ul>
+    <ul class="right-menu">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropbtn">Find Job</a>
+        <div class="dropdown-content">
+          <a href="#">Web Development</a>
+          <a href="#">Graphic Design</a>
+          <a href="#">Content Writing</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Optional: some overlay text to describe the video -->
+<div class="content">
+  <div id="qoral">
+  <h1>Hire the Best Freelance<br>
+  For Online Job </h1>
+  <!-- Use a button to pause/play the video with JavaScript -->
+  <a href="#" id="myBtn" >Get Start</a>
+  </div>
+</div>
+</body>
+</html>
+
+
+
